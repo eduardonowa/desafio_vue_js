@@ -1,18 +1,84 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <div id="logo">
+     <img src="../img/data1.png" alt="">
+   </div> 
+   <h1 id="title">Intern sign in</h1>
+  <Inputs/>
+
+  <div id="footer">
+    <Checkbox/>
+   <Button/>
+  </div>
+
+
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Inputs from '../components/Inputs.vue'
+import Checkbox from '../components/Checkbox.vue'
+import Button from '../components/Button.vue'
+
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    Inputs,
+    Checkbox,
+    Button
   }
 }
 </script>
+
+<style>
+.home {
+  max-width: 620px;
+  height: 100%;
+  margin: 0 auto;
+  background: white;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+}
+
+#title {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5em;
+  font-size: 2.25em;
+  margin-top: 10px;
+  color: #111111;
+  text-align: center;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 0;
+
+}
+
+span {
+  display: block;
+}
+
+.warning {
+  color: red;
+  display: visible;
+  padding: 5px 0px 0px 5px;
+  font-size: 1em;
+}
+
+.clear {
+  display: block;
+  /* visibility: hidden; */
+  padding-left: 5px;
+  font-size: 1em;
+  padding-top: 5px;
+}
+
+</style>
