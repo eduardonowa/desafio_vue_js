@@ -1,6 +1,6 @@
 <template>
   <div id="register">
-    <input @click="sucessPage()"
+    <input @click="funcionando()"
       type="button"
       value="Register"
       class="button-register"
@@ -9,8 +9,14 @@
 </template>
 
 <script>
+import Inputs from './Inputs.vue'
+import funcionando from './Inputs.vue'
 export default {
   name: "Button",
+  components: {
+    Inputs,
+    funcionando
+  },
   methods: {
     sucessPage(){
       this.$router.push('Sucess');
@@ -43,6 +49,19 @@ export default {
 .button-register:hover {
   background: #0ca1a1;
   cursor: pointer;
+}
+
+@media (max-width:768px){
+
+  .button-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+    height: 7vh;
+    margin-top: 20px;
+  }
 }
 
 </style>

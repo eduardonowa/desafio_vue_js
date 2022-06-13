@@ -66,6 +66,12 @@
 <script>
 export default {
   name: "Inputs",
+  methods: {
+     funcionando(){
+      console.log('Está funcionando');
+    }
+
+  }
 };
 </script>
 
@@ -83,7 +89,7 @@ export default {
 
 #form .form2,
 #form .form4 {
-  width: 65%;
+  width: 60%;
 }
 
 #form .form1,
@@ -93,7 +99,7 @@ export default {
 
 #form .form3,
 #form .form5{
-  width: 35%;
+  width: 40%;
   padding-left: 3vw;
 }
 
@@ -139,6 +145,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media (max-width: 768px){
 
+#form {
+  margin: 2vh auto;
+}
+
+#form .form1,
+#form .form2 {
+  padding-bottom: 20px;
+}
+
 .form3,
 .form5 {
   order: 1;
@@ -180,6 +195,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: flex-start;
 }
 
+}
+
+@media (max-height:750px){
+  #form {
+      margin: 1vh auto;
+
+  }
+
+  #form .form1,
+#form .form2 {
+  padding-bottom: 10px;
+}
 }
 
 

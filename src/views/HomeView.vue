@@ -80,4 +80,30 @@ span {
   padding-top: 5px;
 }
 
+@media (max-width: 768px){
+#footer {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 15px 0;
+  }
+  
+  #title {
+    margin: 5px;
+  }
+
+}
+
+@media (max-height:750px) {
+
+
+  #logo {
+    padding-top: 10px;
+  }
+
+  #footer {
+    padding: 10px 0;
+  }
+}
+
 </style>

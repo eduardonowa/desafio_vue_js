@@ -79,8 +79,11 @@ input[type="checkbox"] {
   color: #111111;
   cursor: pointer;
   display: flex;
+  font-size: 1.125em;
   padding-left: 20px;
-  padding-top: 7px;
+  padding-top: 10px;
   text-shadow: 0.5px 0.5px 10px rgb(0, 0, 0, 0.5);
 }
+
+
 </style>
