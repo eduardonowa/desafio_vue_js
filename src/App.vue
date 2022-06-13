@@ -47,5 +47,20 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 768px){
+
+body {
+  background: white;
+  height: 100%;
+  
+}
+
+.card {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+}
 
 </style>

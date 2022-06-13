@@ -3,9 +3,8 @@
    <div id="logo">
      <img src="../img/data1.png" alt="">
    </div> 
-   <h1 id="title">Intern sign in</h1>
+   <h1 id="title">Intern Sign Up</h1>
   <Inputs/>
-
   <div id="footer">
     <Checkbox/>
    <Button/>
@@ -23,7 +22,7 @@ import Button from '../components/Button.vue'
 
 
 export default {
-  name: 'HomeView',
+  name: 'Home',
   components: {
     Inputs,
     Checkbox,
@@ -32,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scooped>
 .home {
   max-width: 620px;
   height: 100%;

@@ -1,17 +1,25 @@
 <template>
   <div id="register">
-    <input
+    <input @click="sucessPage()"
       type="button"
       value="Register"
       class="button-register"
-    /> <a href="../views/SucessView.vue"></a>
+    /> 
   </div>
 </template>
 
 <script>
 export default {
   name: "Button",
-};
+  methods: {
+    sucessPage(){
+      this.$router.push('Sucess');
+    }
+
+  }
+
+
+}
 </script>
 
 <style scooped>

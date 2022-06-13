@@ -88,7 +88,7 @@ export default {
 
 #form .form1,
 #form .form2 {
-  padding-bottom: 4vw;
+  padding-bottom: 20px;
 }
 
 #form .form3,
@@ -136,6 +136,56 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 20px;
   border-width: thin;
 }
+
+@media (max-width: 768px){
+
+.form3,
+.form5 {
+  order: 1;
+}
+
+.form2, .form4 {
+  width: 100% !important;
+}
+
+.form3,
+.form5 {
+  width: 50% !important;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0px !important;
+  margin-top: 2vh;
+  
+  
+}
+
+.input3,
+.input5 {
+  display: flex !important;
+  width: 95%;
+}
+
+.form5{
+  padding-right: 2vw;
+  align-content: flex-end;
+}
+
+.input5 {
+  justify-content: flex-end;
+}
+
+.input3 {
+  margin: 0px !important;
+  display: flex;
+  justify-content: flex-start;
+}
+
+}
+
+
+
+
+
 
 
 </style>
