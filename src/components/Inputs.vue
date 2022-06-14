@@ -1,136 +1,48 @@
 <template>
-  <div id="form">
-    <div class="form1">
-      <label for="fullname">Full Name *</label>
-      <input
-        type="text"
-        autocomplete="nope"
-        required
-        class="input1"
-        placeholder="Name"
-        id="nameInput"
-      />
-      <span id="span0" class="clear">Fullname invalid</span>
-    </div>
-    <div class="form2">
-      <label for="email">Email *</label>
-      <input
-        type="email"
-        autocomplete="nope"
-        required
-        class="input2"
-        placeholder="foo@bar.com"
-        id="emailInput"
-      />
-      <span id="span1" class="clear">Email invalid</span>
-    </div>
-    <div class="form3">
-      <label for="phone">Phone *</label>
-      <input
-        type="tel"
-        required
-        autocomplete="nope"
-        placeholder="(83) 00000-0000"
-        class="input3"
-        id="phoneInput"
-      />
-      <span id="span2" class="clear">Phone invalid</span>
-    </div>
-
-    <div class="form4">
-      <label for="password">Password *</label>
-      <input
-        type="password"
-        required
-        autocomplete="nope"
-        class="input4"
-        id="passwordInput"
-        placeholder="Enter your password"
-      />
-      <span id="span3" class="clear">Password invalid</span>
-    </div>
-    <div class="form5">
-      <label for="birthday">Birthday *</label>
-      <input
-        type="date"
-        required
-        placeholder="yyyy/mm/dd"
-        class="input5"
-        id="birthdayInput"
-      />
-      <span id="span4" class="clear">Birthday invalid</span>
-    </div>
+  <div :class="classForm">
+    <label :class="classLabel" :for="labelInput">{{ idInput }} *</label>
+    <input
+      :type="typeInput"
+      required
+      :class="classInput"
+      :placeholder="placeholderInput"
+      :id="idInput"
+      :value="valueInput"
+    />
+    <small :id="small" class="clear">{{ idInput }} invalid</small>
   </div>
 </template>
 
 <script>
+
+
+
+
+export function funcionando() {
+  console.log("name");
+}
+
 export default {
   name: "Inputs",
-  methods: {
-     funcionando(){
-      console.log('Está funcionando');
-    }
+  props: {
+    placeholderInput:String,
+    classInput:String,
+    idInput:String,
+    valueInput:String,
+    labelInput:String,
+    showInput:String,
+    typeInput:String,
+    classForm:String,
+    classLabel:String,
+    small:String,
 
-  }
+
+  },
 };
 </script>
 
 <style scooped>
-#form {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 3vh 0vw;
-  color: #767676;
-}
 
-#form .form1 {
-  width: 100%;
-}
-
-#form .form2,
-#form .form4 {
-  width: 60%;
-}
-
-#form .form1,
-#form .form2 {
-  padding-bottom: 20px;
-}
-
-#form .form3,
-#form .form5{
-  width: 40%;
-  padding-left: 3vw;
-}
-
-#form input {
-  margin: 0 auto;
-  display: block;
-  border: 2px solid #aaaaaa;
-  border-radius: 4px;
-  height: 3em;
-  background: white;
-  padding: 0 10px;
-  color: #767676
-}
-
-#form input:focus {
-  outline: 0;
-}
-
-.input1 {
-  width: 100%;
-}
-
-.input2,
-.input4 {
-  width: 100%;
-}
-
-.input3,
-.input5 {
-  width: 100%;
-}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: #767676;
@@ -143,76 +55,65 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-width: thin;
 }
 
-@media (max-width: 768px){
-
-#form {
-  margin: 2vh auto;
-}
-
-#form .form1,
-#form .form2 {
-  padding-bottom: 20px;
-}
-
-.form3,
-.form5 {
-  order: 1;
-}
-
-.form2, .form4 {
-  width: 100% !important;
-}
-
-.form3,
-.form5 {
-  width: 50% !important;
-  display: flex;
-  flex-flow: column wrap;
-  padding: 0px !important;
-  margin-top: 2vh;
-  
-  
-}
-
-.input3,
-.input5 {
-  display: flex !important;
-  width: 95%;
-}
-
-.form5{
-  padding-right: 2vw;
-  align-content: flex-end;
-}
-
-.input5 {
-  justify-content: flex-end;
-}
-
-.input3 {
-  margin: 0px !important;
-  display: flex;
-  justify-content: flex-start;
-}
-
-}
-
-@media (max-height:750px){
+@media (max-width: 768px) {
   #form {
-      margin: 1vh auto;
-
+    margin: 2vh auto;
   }
 
   #form .form1,
-#form .form2 {
-  padding-bottom: 10px;
+  #form .form2 {
+    padding-bottom: 20px;
+  }
+
+  .form3,
+  .form5 {
+    order: 1;
+  }
+
+  .form2,
+  .form4 {
+    width: 100% !important;
+  }
+
+  .form3,
+  .form5 {
+    width: 50% !important;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0px !important;
+    margin-top: 2vh;
+  }
+
+  .input3,
+  .input5 {
+    display: flex !important;
+    width: 95%;
+  }
+
+  .form5 {
+    padding-right: 2vw;
+    align-content: flex-end;
+  }
+
+  .input5 {
+    justify-content: flex-end;
+  }
+
+  .input3 {
+    margin: 0px !important;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
+
+@media (max-height: 750px) {
+  #form {
+    margin: 1vh auto;
+  }
+
+  #form .form1,
+  #form .form2 {
+    padding-bottom: 10px;
+  }
 }
-
-
-
-
-
-
-
 </style>

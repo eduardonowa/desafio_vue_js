@@ -2,7 +2,7 @@
   <div class="pageSucess">
     <div id="header-sucess">
         <div class="logo">
-          <img src="../img/data1.png" alt=""></img>
+          <img src="../img/data1.png" alt="">
         </div>
       <h1>Sucess</h1>
     </div>

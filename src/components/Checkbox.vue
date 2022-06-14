@@ -13,7 +13,7 @@
       <span class="geekmark"></span>
       <span class="label-text">I accept the terms and privacy</span>
     </label>
-    <span id="span5" class="clear">You must accept the terms</span>
+    <small id="small5" class="clear">You must accept the terms</small>
   </div>
 </template>
 

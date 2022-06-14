@@ -1,6 +1,6 @@
 <template>
   <div id="register">
-    <input @click="funcionando()"
+    <input
       type="button"
       value="Register"
       class="button-register"
@@ -10,22 +10,29 @@
 
 <script>
 import Inputs from './Inputs.vue'
-import funcionando from './Inputs.vue'
+import {funcionando} from './Inputs.vue'
+
 export default {
   name: "Button",
   components: {
     Inputs,
-    funcionando
   },
   methods: {
     sucessPage(){
       this.$router.push('Sucess');
+    },
+    
+    funcionando
+
+    
+
     }
+
 
   }
 
 
-}
+
 </script>
 
 <style scooped>
